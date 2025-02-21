@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 *{
     margin: 0;
     padding: 0;
+    font-family: Nunito;
 }
 
 /* ---Navbar Style--- */
@@ -25,7 +27,7 @@ nav{
 
 .buttons button{
     font-size: 18px;
-    padding: 10px 15px;
+    padding: 8px 19px;
     font-weight: 600;
     margin: 0 10px;
     border: 2px solid rgba(0, 0, 0, 0.392);
@@ -33,11 +35,72 @@ nav{
 }
 .buttons button:nth-child(1){
     background-color: transparent;
-    color: black;
     border-radius: 0 20px 0 20px;
 }
 .buttons button:nth-child(2){
     background-color: orange;
     color: white;
     border-radius:20px 0 20px 0;
+}
+
+.navlinks a:hover{
+    color: red;
+}
+.buttons button{
+    transition: 0.5s;
+}
+.buttons button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* --- intro styles ---  */
+
+.intro{
+    display: flex;
+    height: calc(100vh - 70px);
+}
+.left{
+    flex:1;
+}
+.right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right img{
+    height: 90%;
+    object-fit: cover;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+    gap: 1.5rem;}   
+.left h4{
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.585);}
+.left h1{
+    font-size: 90px;
+    color: green;
+    letter-spacing: 7px;
+    font-weight: 800;}
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.btns button{
+    padding: 8px 19px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.btns h5{
+    font-size: 23px;
 }
