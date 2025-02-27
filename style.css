@@ -53,12 +53,45 @@ nav{
     background-color: black;
     color: white;
 }
+.navlinks a{
+    position: relative;
+}
+.navlinks a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 27px;
+    transition: 0.5s;
+}
+.navlinks a:hover::after{
+    width: 100%;
+}
+
+.resp_icon{
+    display: none;
+}
+.resp_icon i{
+    font-size: 30px;
+}
+@media (max-width:750px) {
+    .resp_icon{
+        display: flex;
+    }
+    .navlinks,.buttons{
+        display: none;
+    }
+}
+
 
 /* --- intro styles ---  */
 
 .intro{
     display: flex;
     height: calc(100vh - 70px);
+    
 }
 .left{
     flex:1;
@@ -70,7 +103,7 @@ nav{
     align-items: center;
 }
 .right img{
-    height: 90%;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -105,12 +138,52 @@ nav{
     font-size: 23px;
 }
 
+.btns button:hover{
+    animation: zoom-in-out 0.5s linear infinite;
+}
+@keyframes zoom-in-out{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+@media (max-width:1200px){
+    .intro{
+        height: auto;
+        margin-bottom: 100px;
+    }
+}
+@media (max-width:750px){
+    .intro{
+        flex-direction: column-reverse;
+    }
+    .right img{
+        width: 100vw;
+        height: 50vh;
+        object-fit: contain;
+    }
+    .left{
+        padding: 0 25px;
+    }
+}
+
 /* -- nutrients --  */
 
 .nutrients{
     display: flex;
     justify-content: space-evenly;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
+
 .nutrients .section p{
     font-size: 16px;
     font-weight: 600;
@@ -121,6 +194,7 @@ nav{
     font-weight: 700;
     color: green;
 }
+
 
 
 /* ---- about us styles ---- */
@@ -154,4 +228,16 @@ nav{
 }
 .box3{
     grid-area: box3;
+}
+
+@media (max-width:1200px){
+    .aboutus{
+        margin: 50px;
+    }
+}
+@media (max-width:750px){
+    .aboutus{
+        flex-direction: column;
+        margin: 25px;
+    }
 }
