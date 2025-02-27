@@ -104,3 +104,54 @@ nav{
 .btns h5{
     font-size: 23px;
 }
+
+/* -- nutrients --  */
+
+.nutrients{
+    display: flex;
+    justify-content: space-evenly;
+}
+.nutrients .section p{
+    font-size: 16px;
+    font-weight: 600;
+    color: green;
+}
+.nutrients .section h5{
+    font-size: 20px;
+    font-weight: 700;
+    color: green;
+}
+
+
+/* ---- about us styles ---- */
+
+.aboutus{
+    display: flex;
+    margin: 100px;
+    gap: 2rem;}
+.aboutus .left1{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 
+        repeat(2,auto);
+    grid-template-areas: 
+        "box1 box2"
+        "box3 box3";
+    gap: 2rem;
+}
+.aboutus .right1{
+    flex: 1;
+}
+.aboutus .left1 .box{
+    border: 2px solid black;
+    height: 100px;
+}
+.box1{
+    grid-area: box1;
+}
+.box2{
+    grid-area: box2;
+}
+.box3{
+    grid-area: box3;
+}
